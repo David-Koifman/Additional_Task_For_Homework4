@@ -1,0 +1,30 @@
+{
+  "model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "finetuned_on": "WikiIR training qrels",
+  "epochs": 2,
+  "train_batch_size": 64,
+  "neg_per_pos": 4,
+  "training_samples": 40000,
+  "wikir_test": {
+    "k": 100,
+    "n_queries": 100,
+    "metrics": {
+      "P@1": 0.57,
+      "P@10": 0.174,
+      "P@20": 0.114,
+      "MAP@20": 0.1576,
+      "nDCG@20": 0.2743
+    }
+  },
+  "mirage_test": {
+    "k": 5,
+    "n_queries": 1000,
+    "metrics": {
+      "P@1": 0.927,
+      "P@10": 0.1,
+      "P@20": 0.05,
+      "MAP@20": 0.9611,
+      "nDCG@20": 0.9712
+    }
+  }
+}
